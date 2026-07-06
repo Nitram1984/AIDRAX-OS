@@ -11,14 +11,21 @@
     {
       "build": "002",
       "codename": "AIDRAX Core Bootstrap",
-      "status": "ACTIVE",
+      "status": "GREEN",
       "ring": "Development",
       "host": "AIDRAX-Backup"
     },
     {
       "build": "004",
       "codename": "Service & Module Runtime",
-      "status": "ACTIVE",
+      "status": "GREEN",
+      "ring": "Development",
+      "host": "AIDRAX-Backup"
+    },
+    {
+      "build": "005",
+      "codename": "Runtime Integration",
+      "status": "GREEN",
       "ring": "Development",
       "host": "AIDRAX-Backup"
     }
