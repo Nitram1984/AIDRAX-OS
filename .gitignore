@@ -1,11 +1,31 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Secrets
+.env
+*.key
+*.pem
+*.crt
+auth.json
+tokens.json
+
+# Node / Python
+node_modules/
 __pycache__/
 *.pyc
 *.pyo
-*.log
-.env
-.venv
-.vscode/
-.idea/
+.venv/
+venv/
+
+# Build output
 dist/
 build/
 *.zip
