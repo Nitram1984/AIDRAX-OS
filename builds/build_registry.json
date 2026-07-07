@@ -10,7 +10,14 @@
     },
     {
       "build": "002",
-      "codename": "AIDRAX Core Bootstrap",
+      "codename": "Core Foundation",
+      "status": "GREEN",
+      "ring": "Development",
+      "host": "AIDRAX-Backup"
+    },
+    {
+      "build": "003",
+      "codename": "AIDRAX Kernel Foundation",
       "status": "GREEN",
       "ring": "Development",
       "host": "AIDRAX-Backup"
@@ -30,9 +37,30 @@
       "host": "AIDRAX-Backup"
     },
     {
+      "build": "006",
+      "codename": "Config Engine Hardening",
+      "status": "GREEN",
+      "ring": "Development",
+      "host": "AIDRAX-Backup"
+    },
+    {
       "build": "007",
       "codename": "Enterprise Logging Framework",
       "status": "GREEN",
+      "ring": "Development",
+      "host": "AIDRAX-Backup"
+    },
+    {
+      "build": "008",
+      "codename": "Security Framework",
+      "status": "GREEN",
+      "ring": "Development",
+      "host": "AIDRAX-Backup"
+    },
+    {
+      "build": "009",
+      "codename": "Privacy Framework",
+      "status": "ACTIVE",
       "ring": "Development",
       "host": "AIDRAX-Backup"
     }

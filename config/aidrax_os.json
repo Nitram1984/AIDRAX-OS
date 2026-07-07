@@ -3,5 +3,8 @@
   "build": "006",
   "codename": "Config Engine Hardening",
   "ring": "Development",
-  "host": "AIDRAX-Backup"
+  "host": "AIDRAX-Backup",
+  "current_build": "009",
+  "current_codename": "Privacy Framework",
+  "status": "ACTIVE"
 }
