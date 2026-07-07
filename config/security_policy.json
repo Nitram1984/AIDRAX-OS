@@ -1,0 +1,14 @@
+{
+  "project": "AIDRAX OS",
+  "build": "008",
+  "policy": "security_framework_baseline",
+  "owner_gate_required_for": [
+    "delete_without_owner",
+    "publish_without_owner",
+    "sudo_without_owner"
+  ],
+  "secret_policy": {
+    "commit_secrets": false,
+    "allowed_runtime_prefix": "AIDRAX_"
+  }
+}
