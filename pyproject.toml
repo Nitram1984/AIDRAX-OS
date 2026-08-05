@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aidrax-os-ca011r1"
+version = "0.1.0"
+description = "AIDRAX OS CA-011R1 project discovery and component registry foundation"
+requires-python = ">=3.10"
+authors = [{name = "AIDRAX"}]
+license = {text = "Proprietary - Closed Alpha"}
+
+[project.scripts]
+aidrax-argus = "aidrax_os.argus:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
