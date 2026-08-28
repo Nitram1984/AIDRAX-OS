@@ -2,9 +2,9 @@ name: Engineering Verification
 
 on:
   push:
-    branches: [closed-alpha]
+    branches: [closed-alpha, "closed-alpha/**"]
   pull_request:
-    branches: [closed-alpha]
+    branches: [closed-alpha, "closed-alpha/**"]
 
 jobs:
   verify:
