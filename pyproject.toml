@@ -1,8 +1,42 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "aidrax-os"
-version = "0.11.0-alpha"
-description = "AIDRAX OS Closed Alpha"
+version = "0.15.0a2"
+description = "AIDRAX OS Closed Alpha engineering baseline"
+readme = "README.md"
 requires-python = ">=3.12"
+license = { text = "Proprietary" }
+authors = [{ name = "AIDRAX Intelligence" }]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8.0,<9"]
+
+[project.scripts]
+aidrax-core = "cli.main:main"
+aidrax-events = "cli.events:main"
+aidrax-integrate = "cli.integrate:main"
+aidrax-registry = "cli.registry:main"
+aidrax-scan = "cli.scan:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"aidrax_core.config" = ["defaults/*.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q --import-mode=importlib"

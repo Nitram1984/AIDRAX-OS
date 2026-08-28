@@ -1,0 +1,1 @@
+{"queue":"memory","capacity":256,"overflow_policy":"reject","subscriber_failure_policy":"continue","subscriber_timeout_seconds":null}
