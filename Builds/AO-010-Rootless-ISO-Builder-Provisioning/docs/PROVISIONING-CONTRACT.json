@@ -1,0 +1,8 @@
+{
+  "contract_version": "1.0.0",
+  "target": {"distribution": "Ubuntu", "release": "24.04 LTS", "flavour": "Minimal", "architecture": "amd64"},
+  "builder": {"runtime": "podman", "rootless": true, "userns": "keep-id", "network_after_resolution": "none", "host_mounts": "none", "device_passthrough": false, "privileged": false, "secret_mounts": false},
+  "required_lock_fields": ["base_image", "apt_snapshot", "packages"],
+  "approval_requirements": ["provision_rootless_builder", "base_image_and_snapshot_lock", "boot_test_environment"],
+  "prohibited_actions": {"container_start": false, "image_pull": false, "iso_creation": false, "key_generation": false, "key_import": false, "mok_actions": false, "firmware_changes": false, "storage_changes": false}
+}
