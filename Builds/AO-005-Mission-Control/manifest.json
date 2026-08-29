@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "release": "AO-005.0.0-alpha.1",
+  "name": "AIDRAX OS Mission Control",
+  "status": "owner-approved",
+  "authorities": {"registry": "ATLAS", "events": "HERMES", "lifecycle": "CapabilityRuntime", "observability": "ARGUS", "orchestration": "AIDRAX"},
+  "required_paths": ["README.md", "CHANGELOG.md", "VERSION", "manifest.json", "build/manifest.py", "build/verify_release.sh", "build/build_release.sh", "build/package_release.sh", "docs/MISSION-CONTROL-CONTRACT.md", "docs/OWNER-GATE.md", "docs/ACTIVATION-GATE.md", "src/aidrax_mission_control/__init__.py", "src/aidrax_mission_control/mission.py", "tests/test_mission_control.py"]
+}
