@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=AIDRAX Desktop Shell
+Comment=Owner-gated AIDRAX desktop shell (integration template)
+Exec=aidrax-desktop
+Terminal=false
+Categories=System;
+NoDisplay=true
