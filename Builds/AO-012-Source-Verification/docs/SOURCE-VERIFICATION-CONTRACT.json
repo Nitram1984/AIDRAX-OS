@@ -1,0 +1,7 @@
+{
+  "contract_version": "1.0.0",
+  "target": {"distribution": "Ubuntu", "release": "24.04 LTS", "flavour": "Minimal", "architecture": "amd64"},
+  "required_artifacts": ["base_image_manifest", "apt_release", "xorriso", "squashfs-tools", "grub-efi-amd64-bin"],
+  "approval_requirements": ["verify_local_sources", "review_verification_report"],
+  "prohibited_actions": {"network_access": false, "artifact_download": false, "source_mutation": false, "signature_key_import": false, "package_installation": false, "container_start": false, "iso_creation": false, "firmware_changes": false, "storage_changes": false}
+}
