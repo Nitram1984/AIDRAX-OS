@@ -1,0 +1,8 @@
+{
+  "plan_version": "1.0.0",
+  "execution": "preparation-only",
+  "test_matrix": ["UEFI boot", "Secure Boot enabled", "Secure Boot signature rejection", "recovery medium discovery", "real-hardware acceptance"],
+  "test_media": "not-created-by-AO-009",
+  "required_evidence": ["VM firmware configuration", "test-case identifier", "expected result", "observed result", "owner approval reference"],
+  "prohibited_actions": ["firmware writes", "NVRAM writes", "MOK registration", "disk writes", "USB preparation"]
+}
