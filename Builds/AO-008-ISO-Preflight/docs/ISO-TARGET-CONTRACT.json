@@ -1,0 +1,7 @@
+{
+  "contract_version": "1.0.0",
+  "distribution": {"name": "Ubuntu", "release": "24.04 LTS", "flavour": "Minimal", "architecture": "amd64"},
+  "boot": {"firmware": "UEFI-only", "secure_boot": "enabled-by-default", "trusted_boot_chain": ["Ubuntu", "Microsoft"]},
+  "key_policy": {"additional_keys": "explicit-owner-approval-and-manual-MOK-registration", "automatic_key_enrolment": false, "secure_boot_bypass": false},
+  "execution_policy": {"iso_creation": false, "bootloader_changes": false, "firmware_changes": false, "storage_changes": false, "mok_actions": false}
+}
