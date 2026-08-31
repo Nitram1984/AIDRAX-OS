@@ -1,0 +1,16 @@
+{
+  "build_id": "AO-017",
+  "name": "Minimal Rootfs Definition",
+  "required_paths": [
+    "README.md",
+    "CHANGELOG.md",
+    "VERSION",
+    "docs/ROOTFS-CONTRACT.json",
+    "src/aidrax_minimal_rootfs/definition.py",
+    "build/validate_inputs.py",
+    "build/prepare_composition.py",
+    "build/verify_release.py",
+    "build/build_release.py",
+    "tests/test_definition.py"
+  ]
+}

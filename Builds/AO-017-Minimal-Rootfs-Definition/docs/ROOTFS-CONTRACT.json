@@ -1,0 +1,62 @@
+{
+  "build_id": "AO-017",
+  "status": "OWNER_AUTHORIZED_INPUT_VALIDATION_ONLY",
+  "target": {
+    "distribution": "Ubuntu",
+    "release": "24.04.4",
+    "architecture": "amd64",
+    "rootfs_type": "custom-minimal"
+  },
+  "base_rootfs": {
+    "path": "ubuntu-base-24.04.4-base-amd64.tar.gz",
+    "sha256": "c1e67ef7b17a6300e136118bd1dc04725009cb376c1aad10abcf8cd453628d58",
+    "size": 29989394
+  },
+  "runtime_packages": [
+    {
+      "path": "artifacts/linux-image-6.8.0-31-generic_6.8.0-31.31_amd64.deb",
+      "package": "linux-image-6.8.0-31-generic",
+      "version": "6.8.0-31.31",
+      "sha256": "fd2ed023c84163e62c73d3b7b613a9b004bd31e335641c23d42bd249e489fbe6"
+    },
+    {
+      "path": "artifacts/linux-modules-6.8.0-31-generic_6.8.0-31.31_amd64.deb",
+      "package": "linux-modules-6.8.0-31-generic",
+      "version": "6.8.0-31.31",
+      "sha256": "3f17f2c279257eb50e40da44390bdf8272c440ca078831c348773d1314b5c2fe"
+    },
+    {
+      "path": "artifacts/initramfs-tools-core_0.142ubuntu25_all.deb",
+      "package": "initramfs-tools-core",
+      "version": "0.142ubuntu25",
+      "sha256": "0813fb9bd938a501363cb9016d21954e6ff0a70a3613971560978c4e7aa58a8e"
+    },
+    {
+      "path": "artifacts/busybox-initramfs_1.36.1-6ubuntu3_amd64.deb",
+      "package": "busybox-initramfs",
+      "version": "1.36.1-6ubuntu3",
+      "sha256": "57242e0e63f276a07cb7c794c65dd647ce9f4bf17310cd163003e146cbddb950"
+    }
+  ],
+  "integration": {
+    "signed_boot_lock_commit": "e3fcc75",
+    "signed_boot_materialization_commit": "200da9e",
+    "package_install_order": [
+      "linux-modules-6.8.0-31-generic",
+      "linux-image-6.8.0-31-generic",
+      "busybox-initramfs",
+      "initramfs-tools-core"
+    ]
+  },
+  "prohibited_actions": [
+    "rootfs_extract",
+    "package_install",
+    "initramfs_generation",
+    "container_start",
+    "iso_creation",
+    "mok_enrollment",
+    "firmware_change",
+    "bootloader_install",
+    "storage_write"
+  ]
+}
