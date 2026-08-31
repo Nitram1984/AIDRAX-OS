@@ -1,0 +1,23 @@
+{
+  "build_id": "AO-016",
+  "status": "OWNER_AUTHORIZED_DOWNLOAD_ONLY",
+  "source": {
+    "build_id": "AO-015",
+    "commit": "e3fcc75",
+    "closure_lock_sha256": "debc2cf4511dfa88797d113186e370962e6746d3a66c0f47b21a4f427b5f9857"
+  },
+  "snapshot_base_url": "https://snapshot.ubuntu.com/ubuntu/20260831T000000Z/",
+  "package_count": 68,
+  "prohibited_actions": [
+    "package_install",
+    "apt_invocation",
+    "dpkg_invocation",
+    "debootstrap_invocation",
+    "container_start",
+    "iso_creation",
+    "mok_enrollment",
+    "firmware_change",
+    "bootloader_install",
+    "storage_write"
+  ]
+}
