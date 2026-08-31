@@ -1,0 +1,7 @@
+{
+  "contract_version": "1.0.0",
+  "target": {"distribution": "Ubuntu", "release": "24.04 LTS", "flavour": "Minimal", "architecture": "amd64"},
+  "required_evidence": ["ao010_rootless_plan", "ao011_lock_hash_via_ao012", "ao012_verified_report"],
+  "approval_requirements": ["alpha_iso_build", "alpha_iso_artifact_retention", "vm_boot_test"],
+  "prohibited_actions": {"iso_creation": false, "container_start": false, "image_pull": false, "key_generation": false, "key_import": false, "mok_actions": false, "firmware_changes": false, "storage_changes": false}
+}
