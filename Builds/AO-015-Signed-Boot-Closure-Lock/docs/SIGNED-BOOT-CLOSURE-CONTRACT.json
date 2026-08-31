@@ -1,0 +1,34 @@
+{
+  "build_id": "AO-015",
+  "status": "OWNER_AUTHORIZED_METADATA_LOCK_ONLY",
+  "target": {
+    "distribution": "Ubuntu",
+    "release": "24.04 LTS",
+    "suite": "noble",
+    "architecture": "amd64",
+    "boot": "UEFI",
+    "secure_boot": "enabled"
+  },
+  "snapshot": {
+    "timestamp": "20260831T000000Z",
+    "packages_url": "https://snapshot.ubuntu.com/ubuntu/20260831T000000Z/dists/noble/main/binary-amd64/Packages.gz",
+    "packages_sha256": "e0d7e4cbb09d2aa7f9e104a1488817417bc9d85f3e5d9a21156a52ec641ae531"
+  },
+  "root_packages": {
+    "shim-signed": "1.58+15.8-0ubuntu1",
+    "grub-efi-amd64-signed": "1.202+2.12-1ubuntu7"
+  },
+  "alternative_preferences": {
+    "debconf|debconf-2.0": "debconf",
+    "grub-efi-amd64|grub-pc": "grub-efi-amd64",
+    "grub-efi-amd64-signed|grub-efi-arm64-signed": "grub-efi-amd64-signed"
+  },
+  "prohibited_actions": [
+    "package_install",
+    "iso_creation",
+    "mok_enrollment",
+    "firmware_change",
+    "bootloader_install",
+    "storage_write"
+  ]
+}
