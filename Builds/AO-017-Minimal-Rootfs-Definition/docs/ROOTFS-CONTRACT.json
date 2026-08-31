@@ -34,7 +34,7 @@
     {
       "path": "artifacts/busybox-initramfs_1.36.1-6ubuntu3_amd64.deb",
       "package": "busybox-initramfs",
-      "version": "1.36.1-6ubuntu3",
+      "version": "1:1.36.1-6ubuntu3",
       "sha256": "57242e0e63f276a07cb7c794c65dd647ce9f4bf17310cd163003e146cbddb950"
     }
   ],
