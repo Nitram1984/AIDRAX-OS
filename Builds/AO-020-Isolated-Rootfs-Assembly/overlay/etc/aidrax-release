@@ -1,0 +1,3 @@
+AIDRAX_OS_BUILD=AO-020
+BASE=Ubuntu 24.04.4 amd64
+STATUS=payload-assembled-not-bootable
