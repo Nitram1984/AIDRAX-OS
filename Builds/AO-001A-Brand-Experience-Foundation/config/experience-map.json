@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "events": {
+    "POWER_ON": "boot",
+    "BOOT_COMPLETE": "login",
+    "LOGIN_READY": "desktop",
+    "UPDATE_SUCCEEDED": "update-success",
+    "SHUTDOWN_REQUESTED": "shutdown"
+  }
+}
