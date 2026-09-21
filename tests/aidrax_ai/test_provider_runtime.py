@@ -10,6 +10,8 @@ from aidrax_ai.provider.lifecycle import ProviderHealth
 from aidrax_ai.provider.provider import Provider
 from aidrax_ai.provider.runtime import ProviderRuntime
 from aidrax_core.capabilities.contracts import CapabilityHealth
+from aidrax_os.runtime import AIProviderService
+from atlas.registry import Registry
 
 
 class FakeProvider(Provider):
@@ -83,6 +85,21 @@ class ProviderRuntimeTests(unittest.TestCase):
         self.assertEqual(adapter.health(), CapabilityHealth.HEALTHY)
         adapter.deactivate()
         self.assertEqual(adapter.health(), CapabilityHealth.DEGRADED)
+
+    def test_os_service_composes_provider_runtime_through_capability_runtime(self):
+        with tempfile.TemporaryDirectory() as directory:
+            runtime = ProviderRuntime()
+            runtime.register(FakeProvider(), "local-ai")
+            service = AIProviderService(
+                config_directory="config",
+                registry=Registry(Path(directory) / "registry.json"),
+                provider_runtime=runtime,
+            )
+            statuses = service.start()
+            self.assertEqual(statuses[0].state.value, "READY")
+            self.assertTrue(service.status()["started"])
+            self.assertEqual(service.execute("ai.chat", {"text": "hello"})["echo"], "hello")
+            service.stop()
 
 
 if __name__ == "__main__":
