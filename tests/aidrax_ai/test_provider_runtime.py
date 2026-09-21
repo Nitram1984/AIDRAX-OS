@@ -1,6 +1,8 @@
+import os
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from aidrax_ai.provider.capability import AIProviderCapability
 from aidrax_ai.provider.catalog import ProviderBinding, ProviderCatalog
@@ -9,9 +11,30 @@ from aidrax_ai.provider.factory import ProviderFactory
 from aidrax_ai.provider.lifecycle import ProviderHealth
 from aidrax_ai.provider.provider import Provider
 from aidrax_ai.provider.runtime import ProviderRuntime
+from aidrax_ai.provider.secrets import EnvironmentSecretResolver
 from aidrax_core.capabilities.contracts import CapabilityHealth
-from aidrax_os.runtime import AIProviderService
+from aidrax_os.runtime import AIProviderService, OwnerGateAuthorizationBridge
 from atlas.registry import Registry
+
+
+class _Receipt:
+    def __init__(self, request_id, status, scope_hash):
+        self.request_id = request_id
+        self.status = status
+        self.scope_hash = scope_hash
+
+
+class _OwnerGate:
+    def __init__(self):
+        self._scope_hash = "scope"
+
+    def submit(self, action, target, rationale):
+        self.last_target = target
+        return _Receipt("request-1", "PENDING_OWNER", self._scope_hash)
+
+    def approve(self, request_id, scope_hash, approved):
+        status = "APPROVED_FOR_DISPATCH" if approved and scope_hash == self._scope_hash else "RED/STOP"
+        return _Receipt(request_id, status, self._scope_hash)
 
 
 class FakeProvider(Provider):
@@ -100,6 +123,26 @@ class ProviderRuntimeTests(unittest.TestCase):
             self.assertTrue(service.status()["started"])
             self.assertEqual(service.execute("ai.chat", {"text": "hello"})["echo"], "hello")
             service.stop()
+
+    def test_environment_secret_resolver_is_runtime_only(self):
+        resolver = EnvironmentSecretResolver()
+        key = resolver.key("xai-watchlist", "api-key")
+        self.assertEqual(key, "AIDRAX_PROVIDER_XAI_WATCHLIST_API_KEY")
+        with patch.dict(os.environ, {key: "test-secret"}, clear=False):
+            self.assertEqual(resolver.resolve("xai-watchlist", "api-key"), "test-secret")
+        self.assertIsNone(resolver.resolve("xai-watchlist", "api-key"))
+
+    def test_owner_gate_bridge_consumes_exact_scope_once(self):
+        agent = _OwnerGate()
+        bridge = OwnerGateAuthorizationBridge(agent)
+        payload = {"text": "approved prompt"}
+        receipt = bridge.prepare("cloud-ai", "ai.chat", payload)
+        self.assertEqual(receipt.status, "PENDING_OWNER")
+        self.assertNotIn("approved prompt", str(agent.last_target))
+        bridge.approve(receipt.request_id, receipt.scope_hash, True)
+        self.assertTrue(bridge("cloud-ai", "ai.chat", payload))
+        self.assertFalse(bridge("cloud-ai", "ai.chat", payload))
+        self.assertFalse(bridge("cloud-ai", "ai.chat", {"text": "different"}))
 
 
 if __name__ == "__main__":

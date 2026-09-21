@@ -1,0 +1,3 @@
+3ed8aa3591f793de2e0886d077aae950810843caac5eaf96e1436a439bf5e150  input-evidence/EFI/BOOT/BOOTX64.EFI
+076ceb4824b4bc71e898aaf10cefb738f4eb15efc5e6e951c150c1a265a47d36  input-evidence/EFI/BOOT/grubx64.efi
+39037872a0bb357a0f40c5e3ce6a1757b5b54c78c31f8d5da01169c2ca94b3a7  input-evidence/EFI/BOOT/rejected/BOOTX64.EFI.unsigned-shimx64

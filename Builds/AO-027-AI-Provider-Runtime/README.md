@@ -14,4 +14,8 @@ execution. It exposes `ai.chat` through `llama3.2:latest` and `ai.code` through
 `qwen2.5-coder:7b`. No provider can mutate host state through this build.
 
 External/cloud providers remain disabled until separately configured with an
-explicit authorization boundary and secret-handling contract.
+explicit authorization boundary and runtime-only secret contract. AO-027 now
+ships that generic secret boundary via `EnvironmentSecretResolver` and binds
+AO-026-style exact-scope receipts through `OwnerGateAuthorizationBridge`; no
+external provider is enabled by default. Architecture closure decisions are
+recorded in `ARCHITECTURE-CLOSURE.md`.

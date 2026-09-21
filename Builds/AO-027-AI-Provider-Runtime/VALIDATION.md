@@ -3,8 +3,8 @@
 - Python compileall: GREEN
 - Contract verifier: GREEN
 - CI workflow verifier: GREEN
-- Provider unit tests: GREEN — 5/5
-- Full pytest suite: GREEN — exit code 0
+- Provider/OS integration tests: GREEN — 8/8 on pytest 9.1.1
+- Full pytest suite: GREEN — 68/68 on pytest 9.1.1
 - Wheel build: GREEN — `aidrax_os-0.15.0a2-py3-none-any.whl`
 - Local Ollama discovery: GREEN
 - Real `ai.chat` execution: GREEN — `llama3.2:latest` returned `OK`

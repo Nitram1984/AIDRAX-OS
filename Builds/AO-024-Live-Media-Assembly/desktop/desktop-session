@@ -1,0 +1,10 @@
+#!/bin/sh
+# AO-024 adapter: an explicit desktop payload command is required.
+set -eu
+
+if [ -z "${AIDRAX_DESKTOP_COMMAND:-}" ]; then
+  echo "AIDRAX desktop payload is not configured" >&2
+  exit 78
+fi
+
+exec /bin/sh -c "$AIDRAX_DESKTOP_COMMAND"

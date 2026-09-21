@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=XSession
+Name=AIDRAX Desktop
+Comment=AIDRAX live desktop session
+Exec=/usr/local/lib/aidrax/desktop-session
+TryExec=/usr/local/lib/aidrax/desktop-session

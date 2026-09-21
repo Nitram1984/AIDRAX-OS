@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+openbox-session &
+exec /usr/local/lib/aidrax/aidrax-dashboard.py
