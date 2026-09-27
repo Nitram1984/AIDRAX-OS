@@ -1,3 +1,36 @@
+[Deutsch](#deutsch) · [English](#english)
+
+## Deutsch
+
+# Verhaltenskodex
+
+## Unser Umgang miteinander
+
+Alle Beteiligten sollen in Issues, Pull Requests, Reviews und anderen Projektbereichen von AIDRAX OS respektvoll behandelt werden – unabhängig von Herkunft, Identität, Erfahrung oder Fähigkeiten.
+
+- Sei offen, geduldig und rücksichtsvoll.
+- Formuliere Kritik sachlich und bezogen auf die Arbeit.
+- Respektiere unterschiedliche Sichtweisen und nimm berechtigte Korrekturen an.
+- Schütze die Privatsphäre anderer und bleibe beim Thema.
+
+## Nicht akzeptiertes Verhalten
+
+Belästigung, Diskriminierung, Drohungen, sexualisierte Annäherungen, persönliche Angriffe, Spam und die Veröffentlichung privater Informationen anderer ohne deren Zustimmung sind nicht akzeptabel.
+
+## Meldungen und Moderation
+
+Nutze bei öffentlichen Vorfällen die GitHub-Funktion **Report content**, sofern verfügbar. Du kannst außerdem den Projektverantwortlichen [@Nitram1984](https://github.com/Nitram1984) im betroffenen Thread um Moderation bitten, ohne beleidigende Inhalte zu wiederholen oder private Informationen offenzulegen.
+
+Nutze bei sensiblen Vorfällen die vertraulichen Meldefunktionen von GitHub, statt personenbezogene Details öffentlich zu veröffentlichen. Für Sicherheitslücken gilt die gesonderte [Sicherheitsrichtlinie](SECURITY.md).
+
+Der Projektverantwortliche kann unangemessene Inhalte bearbeiten oder entfernen, Diskussionen sperren oder die Teilnahme einschränken. Maßnahmen sollen Schwere und Wiederholung des Verhaltens berücksichtigen, fair und verhältnismäßig sein und die Privatsphäre respektieren.
+
+Dieser Kodex gilt in den Projektbereichen sowie bei öffentlichen Auftritten im Namen des Projekts.
+
+---
+
+## English
+
 # Code of Conduct
 
 ## Our expectations

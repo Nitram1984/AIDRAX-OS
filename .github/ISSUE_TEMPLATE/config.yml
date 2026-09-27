@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Private security report
+  - name: "Sicherheitslücke vertraulich melden / Private security report"
     url: https://github.com/Nitram1984/AIDRAX-OS/security/advisories/new
-    about: Report vulnerabilities privately. Do not use public issues.
+    about: "Sicherheitslücken bitte privat melden. / Please report vulnerabilities privately."

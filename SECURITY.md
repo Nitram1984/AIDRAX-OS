@@ -1,3 +1,38 @@
+[Deutsch](#deutsch) · [English](#english)
+
+## Deutsch
+
+# Sicherheitsrichtlinie
+
+## Projektstatus
+
+AIDRAX OS befindet sich in einer geschlossenen Alpha-Phase. Derzeit gibt es keine unterstützten stabilen Veröffentlichungen oder garantierten Zeiträume für Sicherheitsaktualisierungen. Hinweise zum aktuellen Entwicklungsstand sind willkommen. Alpha-Versionen sind nicht für den produktiven Betrieb oder sensible Daten vorgesehen.
+
+## Sicherheitslücken vertraulich melden
+
+Nutze die [private Meldung einer Sicherheitslücke auf GitHub](https://github.com/Nitram1984/AIDRAX-OS/security/advisories/new). Alternativ öffnest du den Bereich **Security** des Repositorys und wählst **Report a vulnerability**.
+
+Veröffentliche keine Details zu Sicherheitslücken in öffentlichen Issues, Diskussionen oder Pull Requests. Falls die private Meldefunktion nicht verfügbar ist, bitte in einem allgemeinen Issue um die Einrichtung eines vertraulichen Meldewegs, ohne technische Details der Schwachstelle offenzulegen.
+
+Eine hilfreiche Meldung enthält:
+
+- Betroffenen Branch, Commit oder Versionsstand.
+- Beschreibung der Schwachstelle und ihrer möglichen Auswirkungen.
+- Minimale Schritte zur Reproduktion oder einen Nachweis mit künstlichen Testdaten.
+- Relevante Angaben zur Umgebung und mögliche Gegenmaßnahmen.
+
+Entferne Zugangsdaten, Tokens, personenbezogene Daten und sonstige private Informationen. Teste nur Systeme, für deren Prüfung du autorisiert bist.
+
+## Bearbeitung von Meldungen
+
+Der Projektverantwortliche prüft Meldungen und stimmt weitere Schritte über die private Sicherheitsmeldung ab. Zur Reproduktion können zusätzliche Informationen angefordert werden. Feste Antwort- und Behebungszeiten werden während der Alpha-Phase nicht garantiert.
+
+Stimme eine öffentliche Bekanntmachung mit dem Projektverantwortlichen ab, damit Betroffene hilfreiche Hinweise und möglichst eine Fehlerbehebung erhalten können.
+
+---
+
+## English
+
 # Security Policy
 
 ## Project status
