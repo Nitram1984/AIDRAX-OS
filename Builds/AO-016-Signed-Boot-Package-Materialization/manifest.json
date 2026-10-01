@@ -1,0 +1,17 @@
+{
+  "build_id": "AO-016",
+  "name": "Signed Boot Package Materialization",
+  "required_paths": [
+    "README.md",
+    "CHANGELOG.md",
+    "VERSION",
+    "docs/MATERIALIZATION-CONTRACT.json",
+    "docs/AO-015-SIGNED-BOOT-CLOSURE-LOCK.json",
+    "src/aidrax_signed_boot_materialization/materialize.py",
+    "build/import_lock.py",
+    "build/materialize.py",
+    "build/verify_release.py",
+    "build/build_release.py",
+    "tests/test_materialize.py"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "release": "AO-001.0.0-alpha.1",
+  "name": "AIDRAX OS Platform Foundation",
+  "status": "architecture-review",
+  "purpose": "Standalone canonical foundation; no existing project code is overwritten.",
+  "runtime": {"python": ">=3.10", "external_dependencies": []},
+  "authorities": {
+    "registry": "ATLAS",
+    "event_bus": "HERMES",
+    "observability": "ARGUS",
+    "lifecycle_owner": "CapabilityRuntime"
+  },
+  "required_paths": [
+    "README.md", "CHANGELOG.md", "VERSION", "manifest.json",
+    "build/build_release.sh", "build/build_iso.sh", "build/package_release.sh",
+    "build/verify_release.sh", "build/manifest.py", "platform/boot-order.json",
+    "docs/DEVELOPMENT-HANDBOOK.md", "docs/PLATFORM-LIFECYCLE.md",
+    "docs/RELEASE-PROCESS.md", "docs/ISO-ROADMAP.md",
+    "src/aidrax_os/__init__.py", "src/aidrax_os/platform.py"
+  ]
+}

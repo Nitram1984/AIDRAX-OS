@@ -1,0 +1,1 @@
+{"build_id":"AO-019","required_paths":["README.md","CHANGELOG.md","VERSION","docs/MATERIALIZATION-CONTRACT.json","docs/AO-018-RUNTIME-CLOSURE-LOCK.json","src/aidrax_rootfs_runtime_materialization/materialize.py","build/import_lock.py","build/materialize.py","build/verify_release.py","build/build_release.py","tests/test_materialize.py"]}

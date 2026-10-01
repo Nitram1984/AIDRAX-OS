@@ -1,0 +1,16 @@
+{
+  "build_id": "AO-015",
+  "name": "Signed Boot Closure Lock",
+  "required_paths": [
+    "README.md",
+    "CHANGELOG.md",
+    "VERSION",
+    "docs/SIGNED-BOOT-CLOSURE-CONTRACT.json",
+    "docs/SIGNED-BOOT-CLOSURE-LOCK.json",
+    "src/aidrax_signed_boot_closure/resolver.py",
+    "build/resolve_closure.py",
+    "build/verify_release.py",
+    "build/build_release.py",
+    "tests/test_resolver.py"
+  ]
+}

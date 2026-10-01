@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "release": "AO-010.0.0-alpha.1",
+  "name": "AIDRAX OS Rootless ISO Builder Provisioning",
+  "status": "context-provisioning-only",
+  "integration_mode": "standalone-owner-gated",
+  "authorities": {"registry": "ATLAS", "events": "HERMES", "lifecycle": "CapabilityRuntime", "observability": "ARGUS", "orchestration": "AIDRAX"},
+  "provisioning_contract": "docs/PROVISIONING-CONTRACT.json",
+  "required_paths": [
+    "README.md", "CHANGELOG.md", "VERSION", "manifest.json", "docs/PROVISIONING-CONTRACT.json", "docs/LOCK-FORMAT.md", "docs/FOLLOW-UP-GATES.md",
+    "src/aidrax_rootless_iso_builder/__init__.py", "src/aidrax_rootless_iso_builder/provision.py", "build/build_release.py", "build/verify_release.py", "tests/test_provision.py"
+  ]
+}

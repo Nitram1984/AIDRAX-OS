@@ -23,13 +23,13 @@ AIDRAX OS befindet sich in einer geschlossenen Alpha-Phase. Besprich größere �
 4. Aktualisiere die betroffene Dokumentation und ergänze bei Verhaltensänderungen aussagekräftige Tests.
 5. Öffne einen Pull Request mit einer Zusammenfassung, Verweisen auf zugehörige Issues, Prüfergebnissen und bekannten Einschränkungen.
 
-Auf dem Standardbranch gibt es derzeit weder einen Anwendungs-Build noch eine Testsuite. Gib keine Tests als bestanden an, die du nicht ausgeführt hast. Prüfe bei Dokumentationsänderungen Links, Dateipfade, Formatierung und die Darstellung der Vorlagen. Sobald ausführbarer Code hinzukommt, sollen Einrichtung und Prüfkommandos dokumentiert werden.
+Richte die Python-Umgebung gemäß [README.md](README.md) ein und führe `./scripts/verify.sh` aus. Jede Änderung muss kompilieren, dokumentiert sein und bei Verhaltensänderungen aussagekräftige Tests enthalten; vermeide Platzhalterimplementierungen. Gib keine Tests als bestanden an, die du nicht ausgeführt hast. Prüfe bei Dokumentationsänderungen Links, Dateipfade, Formatierung und die Darstellung der Vorlagen. Für betroffene Bausteine unter `Builds/` führe zusätzlich deren dokumentierte Prüfungen aus.
 
 ## Prüfung und Lizenzierung
 
 Gehe konstruktiv auf Rückmeldungen ein. Der Projektverantwortliche entscheidet, welche Beiträge zum aktuellen Alpha-Stand passen. Feste Prüf- oder Antwortzeiten werden nicht zugesagt.
 
-Für das Projekt wurde noch keine Lizenz ausgewählt. Kläre die Lizenzierung vor umfangreichen Codebeiträgen mit dem Projektverantwortlichen. Reiche nur Inhalte ein, zu deren Weitergabe du berechtigt bist, und kennzeichne fremde Bestandteile einschließlich ihrer vorhandenen Lizenz.
+Während der geschlossenen Alpha bleiben gemäß [LICENSE](LICENSE) alle Rechte vorbehalten. Kläre die Lizenzierung vor umfangreichen Codebeiträgen mit dem Projektverantwortlichen. Reiche nur Inhalte ein, zu deren Weitergabe du berechtigt bist, und kennzeichne fremde Bestandteile einschließlich ihrer vorhandenen Lizenz.
 
 ---
 
@@ -56,10 +56,10 @@ AIDRAX OS is in closed alpha. Please discuss significant changes with [@Nitram19
 4. Update relevant documentation and add meaningful tests when behavior changes.
 5. Open a pull request with a summary, related issue links, verification results, and any limitations.
 
-There is currently no application build or test suite on the default branch. Do not claim tests passed if they were not run. For documentation changes, check links, file paths, formatting, and template rendering. When executable code is added, document its setup and verification commands.
+Set up the Python environment as described in [README.md](README.md) and run `./scripts/verify.sh`. Every change must compile, be documented, and include meaningful tests for behavior changes; avoid placeholder implementations. Do not claim tests passed if they were not run. For documentation changes, check links, file paths, formatting, and template rendering. Also run the documented verification for affected components under `Builds/`.
 
 ## Review and licensing
 
 Respond constructively to review feedback. The maintainer decides what fits the current alpha scope; no review or response time is guaranteed.
 
-No project license has been selected yet. Discuss licensing with the maintainer before submitting substantial code. Only submit material you are authorized to contribute, and identify any third-party material and its existing license.
+All rights are reserved during closed alpha under [LICENSE](LICENSE). Discuss licensing with the maintainer before submitting substantial code. Only submit material you are authorized to contribute, and identify any third-party material and its existing license.

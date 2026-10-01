@@ -1,0 +1,9 @@
+{
+  "build_id": "AO-018",
+  "required_paths": [
+    "README.md", "CHANGELOG.md", "VERSION", "manifest.json",
+    "docs/RUNTIME-CLOSURE-CONTRACT.json", "docs/RUNTIME-CLOSURE-LOCK.json",
+    "src/aidrax_rootfs_runtime_closure/resolve.py", "build/resolve.py",
+    "build/verify_release.py", "build/build_release.py", "tests/test_resolve.py"
+  ]
+}

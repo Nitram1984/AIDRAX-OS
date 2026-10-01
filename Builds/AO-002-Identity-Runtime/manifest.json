@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "release": "AO-002.0.0-alpha.1",
+  "name": "AIDRAX OS Identity Runtime",
+  "status": "architecture-review",
+  "scope": "local identity contract only; no credentials, provider, network, or persistent sessions",
+  "authorities": {"registry": "ATLAS", "events": "HERMES", "observability": "ARGUS"},
+  "required_paths": [
+    "README.md", "CHANGELOG.md", "VERSION", "manifest.json",
+    "build/build_release.sh", "build/package_release.sh", "build/verify_release.sh", "build/manifest.py",
+    "docs/IDENTITY-CONTRACT.md", "docs/INTEGRATION-GATE.md",
+    "src/aidrax_identity/__init__.py", "src/aidrax_identity/domain.py", "src/aidrax_identity/runtime.py",
+    "tests/test_identity_runtime.py"
+  ]
+}

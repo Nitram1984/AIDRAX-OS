@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "boot_sequence": [
+    {"order": 10, "component": "configuration", "responsibility": "load validated local configuration"},
+    {"order": 20, "component": "logging", "responsibility": "create structured boot evidence"},
+    {"order": 30, "component": "ATLAS", "responsibility": "restore authoritative registry"},
+    {"order": 40, "component": "HERMES", "responsibility": "start canonical event bus"},
+    {"order": 50, "component": "ARGUS", "responsibility": "start health and policy observation"},
+    {"order": 60, "component": "CapabilityRuntime", "responsibility": "discover and activate approved capabilities"},
+    {"order": 70, "component": "MissionControl", "responsibility": "expose controlled operator interface"}
+  ],
+  "failure_policy": "Stop before dependent components start; emit an ARGUS-readable failure event."
+}

@@ -1,0 +1,1 @@
+{"build_id":"AO-020","required_paths":["README.md","CHANGELOG.md","VERSION","docs/ASSEMBLY-CONTRACT.json","overlay/etc/aidrax-release","src/aidrax_rootfs_assembly/assemble.py","build/assemble.py","build/verify_release.py","build/build_release.py","tests/test_assemble.py"]}

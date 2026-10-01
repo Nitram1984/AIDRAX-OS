@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "release": "AO-003.0.0-alpha.1",
+  "name": "AIDRAX OS Memory Runtime",
+  "status": "architecture-review",
+  "scope": "local JSONL journal only; no provider, embedding, network, cloud, or secret storage",
+  "authorities": {"registry": "ATLAS", "events": "HERMES", "observability": "ARGUS"},
+  "required_paths": ["README.md", "CHANGELOG.md", "VERSION", "manifest.json", "build/manifest.py", "build/verify_release.sh", "build/build_release.sh", "build/package_release.sh", "docs/MEMORY-CONTRACT.md", "docs/RETENTION-GATE.md", "src/aidrax_memory/__init__.py", "src/aidrax_memory/runtime.py", "tests/test_memory_runtime.py"]
+}

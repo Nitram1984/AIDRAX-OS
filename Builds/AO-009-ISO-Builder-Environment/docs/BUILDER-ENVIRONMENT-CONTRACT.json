@@ -1,0 +1,8 @@
+{
+  "contract_version": "1.0.0",
+  "target": {"distribution": "Ubuntu", "release": "24.04 LTS", "flavour": "Minimal", "architecture": "amd64"},
+  "reproducibility": {"base_image_digest_required": true, "apt_snapshot_required": true, "package_lock_required": true, "network_after_resolution": "disabled", "build_timestamp": "SOURCE_DATE_EPOCH-required"},
+  "containment": {"builder_isolation": "ephemeral-rootless", "host_mounts": "none", "privileged_mode": false, "device_passthrough": false, "secret_mounts": false},
+  "prohibited_actions": {"iso_creation": false, "bootloader_changes": false, "firmware_changes": false, "storage_changes": false, "mok_actions": false, "key_generation": false, "key_import": false},
+  "approval_requirements": ["builder_environment", "package_source_lock", "boot_test_preparation"]
+}

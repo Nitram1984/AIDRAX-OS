@@ -1,0 +1,20 @@
+{
+  "build_id": "AO-018",
+  "status": "OWNER_AUTHORIZED_METADATA_LOCK_ONLY",
+  "target": {"distribution": "Ubuntu", "release": "24.04.4", "suite": "noble", "architecture": "amd64"},
+  "snapshot": {
+    "packages_sha256": "e0d7e4cbb09d2aa7f9e104a1488817417bc9d85f3e5d9a21156a52ec641ae531",
+    "packages_url": "https://snapshot.ubuntu.com/ubuntu/20260831T000000Z/dists/noble/main/binary-amd64/Packages.gz"
+  },
+  "root_packages": {
+    "linux-image-6.8.0-31-generic": "6.8.0-31.31",
+    "linux-modules-6.8.0-31-generic": "6.8.0-31.31",
+    "initramfs-tools-core": "0.142ubuntu25",
+    "busybox-initramfs": "1:1.36.1-6ubuntu3"
+  },
+  "alternative_preferences": {
+    "busybox|busybox-static": "busybox",
+    "kmod|kmod:amd64": "kmod"
+  },
+  "prohibited_actions": ["package_download", "package_install", "rootfs_extract", "initramfs_generation", "container_start", "iso_creation", "firmware_change", "storage_write"]
+}

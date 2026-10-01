@@ -1,0 +1,1 @@
+{"schema_version": 1, "component": "ao-001-full", "mode": "provider-neutral", "network": "disabled", "secrets": "external-only", "integration": "additive-only"}

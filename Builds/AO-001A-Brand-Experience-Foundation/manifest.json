@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "release": "AO-001A.0.0-alpha.3",
+  "name": "AIDRAX OS Brand & Experience Foundation",
+  "status": "owner-approved-contract",
+  "purpose": "Additive, non-executing contracts for governed brand assets and experience cues.",
+  "runtime": {"python": ">=3.10", "external_dependencies": []},
+  "authorities": {
+    "registry": "ATLAS",
+    "event_bus": "HERMES",
+    "lifecycle": "CapabilityRuntime",
+    "observability": "ARGUS",
+    "orchestration": "AIDRAX"
+  },
+  "required_paths": [
+    "README.md", "CHANGELOG.md", "VERSION", "manifest.json",
+    "build/manifest.py", "build/verify_release.sh", "build/build_release.sh", "build/package_release.sh",
+    "config/brand-catalog.json", "config/experience-map.json",
+    "docs/ARCHITECTURE.md", "docs/INTEGRATION-GATE.md", "docs/OWNER-APPROVAL.md", "docs/VBC-INVENTORY-REPORT.md",
+    "src/aidrax_brand_experience/__init__.py", "src/aidrax_brand_experience/catalog.py",
+    "src/aidrax_brand_experience/experience.py", "tests/test_catalog.py", "tests/test_experience.py", "tests/test_configuration.py"
+  ]
+}
