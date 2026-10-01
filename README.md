@@ -10,7 +10,18 @@ Dieses Repository begleitet die Entwicklung von AIDRAX OS. Das Projekt befindet 
 
 ## Einstieg
 
-Der Standardbranch enthält derzeit die Projektdokumentation und Dateien zur Einrichtung des Repositorys. Eine ausführbare Anwendung und geprüfte Installationsanweisungen werden hier noch nicht bereitgestellt. Dies ist keine produktionsreife Veröffentlichung.
+Dieses Repository enthält die Python-Engineering-Basis für AIDRAX OS: Core-Runtime, ARGUS-Projekterkennung, ATLAS-Registry, HERMES-Ereignisbus und Capability-Integration. Weitere Plattform- und ISO-Bausteine liegen unter `Builds/`. Dies ist keine produktionsreife Veröffentlichung und keine freigegebene installierbare OS-Version.
+
+Für die lokale Engineering-Prüfung wird Python 3.12 oder neuer benötigt:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e '.[test]'
+./scripts/verify.sh
+```
+
+Die Prüfung umfasst Syntax, Verträge, Importe, Smoke-Tests, pytest, Wheel-Build und Installation in einer isolierten Umgebung. Sie ersetzt keine vollständige Prüfung aller Bausteine unter `Builds/`.
 
 Fragen zum Alpha-Zugang oder zu geplanten Arbeiten kannst du über die [Vorlage für allgemeine Fragen](https://github.com/Nitram1984/AIDRAX-OS/issues/new/choose) stellen. Veröffentliche dabei keine vertraulichen Informationen.
 
@@ -27,7 +38,7 @@ Issues und Pull Requests können auf Deutsch oder Englisch verfasst werden. Vera
 
 ## Lizenzstatus
 
-Für das Projekt wurde noch keine Lizenz ausgewählt. Dieses Repository enthält derzeit keine Open-Source-Lizenz. Die Lizenzierung wird gesondert dokumentiert, sobald der Projektinhaber darüber entschieden hat.
+Gemäß [LICENSE](LICENSE) bleiben während der geschlossenen Alpha alle Rechte vorbehalten. Die Paketmetadaten kennzeichnen das Projekt als proprietär; eine Open-Source-Lizenz wird derzeit nicht gewährt.
 
 ---
 
@@ -41,7 +52,18 @@ This is the development repository for AIDRAX OS. The project is in an early, cl
 
 ## Getting started
 
-The default branch currently contains project documentation and repository setup files. A runnable application and verified installation instructions are not yet provided here. This repository is not a production release.
+This repository contains the AIDRAX OS Python engineering baseline: core runtime, ARGUS project discovery, ATLAS registry, HERMES event bus, and capability integration. Additional platform and ISO components live under `Builds/`. This is not a production release or an approved installable OS image.
+
+Local engineering verification requires Python 3.12 or newer:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e '.[test]'
+./scripts/verify.sh
+```
+
+Verification covers syntax, contracts, imports, smoke tests, pytest, wheel building, and installation in an isolated environment. It does not replace complete validation of every component under `Builds/`.
 
 For questions about alpha access or planned work, open a general question using the [issue templates](https://github.com/Nitram1984/AIDRAX-OS/issues/new/choose). Do not include confidential information.
 
@@ -58,4 +80,4 @@ Issues and pull requests may be written in German or English. The project mainta
 
 ## License status
 
-No project license has been selected yet. This repository does not currently include an open-source license. Licensing will be documented separately once the project owner has decided.
+Under [LICENSE](LICENSE), all rights are reserved during closed alpha. Package metadata identifies the project as proprietary; no open-source license is currently granted.
