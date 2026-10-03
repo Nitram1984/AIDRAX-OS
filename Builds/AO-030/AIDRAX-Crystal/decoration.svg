@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="64" viewBox="0 0 80 64">
+<defs><linearGradient id="crystal" x2="0" y2="1"><stop stop-color="#241836"/><stop offset="1" stop-color="#0B0712"/></linearGradient></defs>
+<rect id="decoration-center" x="3" y="24" width="74" height="37" fill="none"/>
+<rect id="decoration-top" x="3" y="0" width="74" height="24" fill="url(#crystal)"/>
+<rect id="decoration-topleft" x="0" y="0" width="3" height="24" fill="#8B5CF6"/>
+<rect id="decoration-topright" x="77" y="0" width="3" height="24" fill="#8B5CF6"/>
+<rect id="decoration-left" x="0" y="24" width="3" height="37" fill="#8B5CF6"/>
+<rect id="decoration-right" x="77" y="24" width="3" height="37" fill="#8B5CF6"/>
+<rect id="decoration-bottom" x="3" y="61" width="74" height="3" fill="#8B5CF6"/>
+<rect id="decoration-bottomleft" x="0" y="61" width="3" height="3" fill="#8B5CF6"/>
+<rect id="decoration-bottomright" x="77" y="61" width="3" height="3" fill="#8B5CF6"/>
+<rect id="decoration-inactive-center" x="3" y="24" width="74" height="37" fill="none"/>
+<rect id="decoration-inactive-top" x="3" y="0" width="74" height="24" fill="url(#crystal)"/>
+<rect id="decoration-inactive-topleft" x="0" y="0" width="3" height="24" fill="#3E2C54"/>
+<rect id="decoration-inactive-topright" x="77" y="0" width="3" height="24" fill="#3E2C54"/>
+<rect id="decoration-inactive-left" x="0" y="24" width="3" height="37" fill="#3E2C54"/>
+<rect id="decoration-inactive-right" x="77" y="24" width="3" height="37" fill="#3E2C54"/>
+<rect id="decoration-inactive-bottom" x="3" y="61" width="74" height="3" fill="#3E2C54"/>
+<rect id="decoration-inactive-bottomleft" x="0" y="61" width="3" height="3" fill="#3E2C54"/>
+<rect id="decoration-inactive-bottomright" x="77" y="61" width="3" height="3" fill="#3E2C54"/>
+</svg>

@@ -1,0 +1,5 @@
+826ac5a728670206f296f2a58287cd9306d6e60922828d51d946ea5ce20edbee  ./BUILD.txt
+d89603353ee3e4a3f18e2ddfe4863a3491dd69687155c4fdd1539198715aa9b7  ./payload/etc/aidrax/ai-core/build.json
+feb16415f972cd2cd099273cd4d5ebc312bf90a57ba2ccba08261a84a99916e4  ./payload/etc/aidrax/ai-core/core.json
+000ebdf5cda4c6facbc8b70831e0dc157cd0458cdcaa8d91bf2697ead6c6b142  ./payload/var/lib/aidrax/ai-core/state/core-state.json
+6f9bb1fa876886534c3addbd3f91e5641a7e6cb05e3d6eb0be6e5c32a5418a90  ./validate.sh

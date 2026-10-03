@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+print("AIDRAX EVOLUTION")
+print("=" * 48)
+print("Observation       : enabled")
+print("Scoring           : enabled")
+print("Skill Learning    : proposal-only")
+print("Proposal Engine   : enabled")
+print("Sandbox           : enabled")
+print("Self-Healing      : diagnose/propose")
+print("Dataset Pipeline  : enabled")
+print("Training          : disabled")
+print("Auto Deploy       : disabled")
+print("Owner Gate        : required")

@@ -1,0 +1,14 @@
+AO-028C-01
+AIDRAX EVOLUTION CONSOLE
+
+Purpose:
+- AI Core status
+- Evolution status
+- Provider registry
+- Owner Gate
+- Node overview
+- Audit preview
+- MemoryVault preview
+
+Mode:
+Read-only dashboard foundation

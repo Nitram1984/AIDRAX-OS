@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "build": "AO-028A-04",
+  "enabled": true,
+  "mode": "bridge",
+  "backend": "local",
+  "paths": {
+    "events": "/var/lib/aidrax/ai-core/memory/events.jsonl",
+    "lessons": "/var/lib/aidrax/ai-core/memory/lessons.jsonl",
+    "builds": "/var/lib/aidrax/ai-core/memory/builds.jsonl"
+  },
+  "retention": {
+    "enabled": true,
+    "policy": "memoryvault-managed"
+  }
+}

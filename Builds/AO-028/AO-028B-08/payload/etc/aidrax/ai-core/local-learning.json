@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "build": "AO-028B-07",
+  "enabled": true,
+  "mode": "dataset-preparation",
+  "training_enabled": false,
+  "fine_tuning_enabled": false,
+  "lora_enabled": false,
+  "provider": "ollama",
+  "policy": "advisory-only",
+  "owner_gate_required_for_training": true
+}

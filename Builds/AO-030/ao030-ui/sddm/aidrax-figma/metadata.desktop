@@ -1,0 +1,11 @@
+[SddmGreeterTheme]
+Name=AIDRAX OS — Figma
+Description=AIDRAX OS Crystal Neon login generated from AO-030 Figma design system
+Author=AIDRAX
+License=GPL-3.0
+Type=sddm-theme
+Version=030.6C
+MainScript=Main.qml
+ConfigFile=theme.conf
+Theme-Id=aidrax-figma
+Theme-API=2.0

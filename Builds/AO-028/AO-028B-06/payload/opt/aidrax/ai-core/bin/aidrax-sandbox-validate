@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+import json
+import sys
+from pathlib import Path
+
+if len(sys.argv) != 2:
+    print("usage: aidrax-sandbox-validate <proposal.json>")
+    raise SystemExit(2)
+
+path = Path(sys.argv[1])
+
+if not path.exists():
+    print("SANDBOX: RED - proposal missing")
+    raise SystemExit(1)
+
+try:
+    data = json.loads(path.read_text())
+except Exception as exc:
+    print("SANDBOX: RED - invalid JSON:", exc)
+    raise SystemExit(1)
+
+required = ["proposal_id", "reason", "risk", "validation_plan"]
+
+missing = [k for k in required if not data.get(k)]
+
+if missing:
+    print("SANDBOX: RED - missing:", ", ".join(missing))
+    raise SystemExit(1)
+
+print("SANDBOX: GREEN")
+print("Proposal:", data["proposal_id"])
+print("Production writes: disabled")

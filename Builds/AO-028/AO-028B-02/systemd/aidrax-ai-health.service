@@ -1,0 +1,14 @@
+[Unit]
+Description=AIDRAX AI Core Health API
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/aidrax/ai-core/bin/aidrax-health
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

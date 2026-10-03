@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "build": "AO-028B-05",
+  "enabled": true,
+  "mode": "isolated-validation",
+  "production_write": false,
+  "checks": [
+    "syntax",
+    "config",
+    "regression",
+    "security",
+    "rollback"
+  ]
+}

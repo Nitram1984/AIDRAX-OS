@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+import json
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+OUT = Path("/var/lib/aidrax/ai-core/evolution/observations/events.jsonl")
+
+def add(kind, message):
+    entry = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "kind": kind,
+        "message": message,
+        "source": "aidrax-evolution"
+    }
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    with OUT.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    print(json.dumps(entry, indent=2, ensure_ascii=False))
+
+if len(sys.argv) < 3:
+    print("usage: aidrax-evolution-observe <kind> <message>")
+    raise SystemExit(2)
+
+add(sys.argv[1], " ".join(sys.argv[2:]))

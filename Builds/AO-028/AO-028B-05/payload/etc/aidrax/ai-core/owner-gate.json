@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "build": "AO-028A-08",
+  "enabled": true,
+  "default_policy": "deny-critical",
+  "approval_tokens": [
+    "green",
+    "go",
+    "next"
+  ],
+  "critical_actions": [
+    "production-deploy",
+    "provider-activation",
+    "provider-promotion",
+    "rollback-apply",
+    "node-role-change",
+    "agent-promotion",
+    "security-policy-change",
+    "firewall-change",
+    "credential-change",
+    "bootloader-change",
+    "kernel-change"
+  ],
+  "protected_components": [
+    "kernel",
+    "bootloader",
+    "firewall",
+    "credentials",
+    "security-policies"
+  ],
+  "autonomous_actions_allowed": [
+    "observe",
+    "analyze",
+    "validate",
+    "health-check",
+    "read-memory",
+    "provider-routing",
+    "proposal-generation"
+  ],
+  "evolution": {
+    "enabled": false,
+    "reserved_for": "AO-028B"
+  }
+}

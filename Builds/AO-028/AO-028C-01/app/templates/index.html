@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIDRAX Evolution Console</title>
+<link rel="stylesheet" href="/static/style.css">
+<meta http-equiv="refresh" content="10">
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>🐉 AIDRAX EVOLUTION</h1>
+        <p>AI Core / Control / Learning Console</p>
+    </div>
+
+    <div class="online">
+        AM ● ONLINE
+    </div>
+</header>
+
+<main>
+
+<section class="hero">
+
+<div class="card">
+<h2>AI CORE</h2>
+
+<div class="metric">
+<span>Core</span>
+<strong>{{ data.state.get("core", "unknown") }}</strong>
+</div>
+
+<div class="metric">
+<span>Build</span>
+<strong>{{ data.build }}</strong>
+</div>
+
+<div class="metric">
+<span>Owner Gate</span>
+<strong>{{ data.state.get("owner_gate", "unknown") }}</strong>
+</div>
+
+<div class="metric">
+<span>AO-028A</span>
+<strong>{{ data.state.get("ao_028a_status", "unknown") }}</strong>
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>EVOLUTION</h2>
+
+{% for key, value in data.evolution.items() %}
+<div class="metric">
+<span>{{ key.replace("_", " ").title() }}</span>
+<strong class="{{ 'green' if value else 'red' }}">
+{{ "ACTIVE" if value else "OFF" }}
+</strong>
+</div>
+{% endfor %}
+
+</div>
+
+
+<div class="card">
+<h2>PROVIDERS</h2>
+
+{% for p in data.providers %}
+<div class="provider">
+<div>
+<strong>{{ p.get("name", p.get("id")) }}</strong>
+<small>{{ p.get("type", "unknown") }}</small>
+</div>
+
+<span class="status {{ p.get('status','unknown') }}">
+{{ p.get("status","unknown") }}
+</span>
+</div>
+{% endfor %}
+
+</div>
+
+</section>
+
+
+<section class="grid">
+
+<div class="card">
+<h2>NODES</h2>
+
+{% for node in data.nodes %}
+<div class="provider">
+<div>
+<strong>{{ node.id.upper() }}</strong>
+<small>{{ node.role }}</small>
+</div>
+
+<span class="{{ 'green' if node.enabled else 'red' }}">
+{{ "ONLINE" if node.enabled else "OFF" }}
+</span>
+</div>
+{% endfor %}
+</div>
+
+
+<div class="card">
+<h2>OWNER GATE</h2>
+
+<div class="metric">
+<span>Enabled</span>
+<strong>
+{{ data.owner_gate.get("enabled", false) }}
+</strong>
+</div>
+
+<div class="metric">
+<span>Policy</span>
+<strong>
+{{ data.owner_gate.get("default_policy", "unknown") }}
+</strong>
+</div>
+
+<div class="metric">
+<span>Auto Deploy</span>
+<strong class="green">BLOCKED</strong>
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>LEARNING</h2>
+
+<div class="metric">
+<span>Observations</span>
+<strong>{{ data.observations | length }}</strong>
+</div>
+
+<div class="metric">
+<span>Proposals</span>
+<strong>{{ data.proposals | length }}</strong>
+</div>
+
+<div class="metric">
+<span>Skills</span>
+<strong>{{ data.skills | length }}</strong>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="logs">
+
+<div class="card">
+<h2>RECENT OBSERVATIONS</h2>
+
+{% if data.observations %}
+{% for item in data.observations %}
+<pre>{{ item }}</pre>
+{% endfor %}
+{% else %}
+<p class="muted">No observations yet.</p>
+{% endif %}
+
+</div>
+
+
+<div class="card">
+<h2>AUDIT LEDGER</h2>
+
+{% if data.audit %}
+{% for item in data.audit %}
+<pre>{{ item }}</pre>
+{% endfor %}
+{% else %}
+<p class="muted">No audit entries yet.</p>
+{% endif %}
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+AIDRAX OS · AO-028C-01 · Evolution Console
+</footer>
+
+</body>
+</html>

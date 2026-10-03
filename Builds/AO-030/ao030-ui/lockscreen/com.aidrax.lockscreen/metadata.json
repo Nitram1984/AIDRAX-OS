@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "com.aidrax.lockscreen",
+        "Name": "AIDRAX OS Lock Screen",
+        "Description": "AIDRAX Crystal Neon lock screen — AO-030",
+        "Version": "030.6C",
+        "License": "GPL-3.0"
+    },
+    "KPackageStructure": "Plasma/LookAndFeel"
+}

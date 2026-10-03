@@ -1,0 +1,17 @@
+{
+  "core": "online",
+  "provider_registry": "online",
+  "adaptive_router": "online",
+  "memoryvault_bridge": "online",
+  "orchestrator": "online",
+  "agents": "online",
+  "health_api": "foundation",
+  "audit": "foundation",
+  "owner_gate": "enabled",
+  "evolution": "not-installed",
+  "provider_registry_build": "AO-028A-02",
+  "adaptive_router_build": "AO-028A-03",
+  "memoryvault_bridge_build": "AO-028A-04",
+  "orchestrator_build": "AO-028A-05",
+  "agent_count": 6
+}

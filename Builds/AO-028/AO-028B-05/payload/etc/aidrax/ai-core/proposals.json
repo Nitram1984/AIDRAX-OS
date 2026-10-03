@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "build": "AO-028B-04",
+  "enabled": true,
+  "deployment": "disabled",
+  "required_fields": [
+    "reason",
+    "expected_benefit",
+    "risk",
+    "validation_plan"
+  ],
+  "owner_gate_required": true
+}

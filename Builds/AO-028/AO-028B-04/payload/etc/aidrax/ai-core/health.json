@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "build": "AO-028A-06",
+  "enabled": true,
+  "listen": "127.0.0.1",
+  "port": 18228,
+  "endpoints": {
+    "health": "/health",
+    "status": "/status"
+  }
+}

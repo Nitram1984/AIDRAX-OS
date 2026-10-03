@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "build": "AO-028B-02",
+  "enabled": true,
+  "metrics": [
+    "success",
+    "failure",
+    "latency",
+    "validation",
+    "confidence",
+    "risk"
+  ],
+  "score_range": {
+    "min": 0,
+    "max": 100
+  }
+}

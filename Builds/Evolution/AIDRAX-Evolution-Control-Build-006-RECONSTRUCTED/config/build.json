@@ -1,0 +1,11 @@
+{
+  "build": "006",
+  "version": "0.6.0",
+  "schema": 6,
+  "port": 18321,
+  "host": "127.0.0.1",
+  "pipeline": "preview_quarantine",
+  "auto_scan": false,
+  "auto_apply": false,
+  "owner_gate": "required"
+}
