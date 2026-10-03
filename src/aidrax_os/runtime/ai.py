@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 from typing import Any
 
@@ -84,5 +85,11 @@ class AIProviderService:
 
 
 def _default_config_directory() -> Path:
-    """Resolve the tracked AIDRAX OS configuration directory."""
+    """Resolve the runtime configuration directory for repo and installed OS use."""
+    configured = os.environ.get("AIDRAX_CONFIG_DIR")
+    if configured:
+        return Path(configured)
+    system_config = Path("/etc/aidrax-os")
+    if system_config.exists():
+        return system_config
     return Path(__file__).resolve().parents[3] / "config"

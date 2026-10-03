@@ -1,0 +1,24 @@
+[
+  {
+    "id": "xai-watchlist",
+    "vendor": "xAI",
+    "status": "prepared_inactive",
+    "production": false,
+    "default": false,
+    "fallback": false,
+    "owner_gate_required": true,
+    "api_base": "https://api.x.ai/v1",
+    "models": [
+      {
+        "id": "grok-4.7",
+        "context_window": 500000,
+        "modalities": ["text", "image_input"],
+        "output": ["text"],
+        "responses_api": true,
+        "chat_completions": true
+      }
+    ],
+    "activation": "separate_owner_approval_required",
+    "source_checked": "2026-09-22"
+  }
+]
