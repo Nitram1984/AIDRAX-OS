@@ -1,0 +1,14 @@
+[Unit]
+Description=AIDRAX Evolution Engine Build 006
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/AIDRAX/Evolution-Engine-Build-006
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 -m aidrax_evolution serve --host 127.0.0.1 --port 18321
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target

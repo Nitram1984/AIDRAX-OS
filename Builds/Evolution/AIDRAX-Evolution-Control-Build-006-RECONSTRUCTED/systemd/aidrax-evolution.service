@@ -1,0 +1,12 @@
+[Unit]
+Description=AIDRAX Evolution Control Build 006
+After=network-online.target
+[Service]
+Type=simple
+Environment=AIDRAX_HOST=127.0.0.1
+Environment=AIDRAX_PORT=18321
+ExecStart=%h/AIDRAX/Evolution-Control-Build-006/bin/aidrax-web-server.py
+Restart=on-failure
+RestartSec=3
+[Install]
+WantedBy=default.target

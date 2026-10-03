@@ -1,0 +1,30 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AIDRAX Evolution Control</title>
+<style>
+:root{--bg:#041014;--panel:rgba(6,18,24,.72);--line:#1a5b61;--green:#78f58a;--lime:#d9ff51;--text:#e8f7f5;--muted:#99bab7}
+*{box-sizing:border-box}body{margin:0;color:var(--text);font:14px/1.35 Inter,Segoe UI,Arial,sans-serif;background:radial-gradient(circle at 75% 35%,rgba(0,255,220,.12),transparent 34%),radial-gradient(circle at 20% 40%,rgba(255,150,0,.12),transparent 32%),linear-gradient(120deg,#10100b,#061116 47%,#03161a);min-height:100vh}
+header{height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid rgba(83,210,203,.22);background:rgba(3,10,13,.75)}
+.brand{display:flex;gap:10px;align-items:center}.logo{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,#5a187d,#9e3ce6)}.sub{font-size:10px;color:var(--lime);letter-spacing:1.3px;font-weight:700}.title{font-size:13px}
+.btn,.tab{border:1px solid #365a5e;background:#071518;color:#e7f5f4;padding:7px 11px;border-radius:7px}.pill{border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:10px;color:var(--green)}
+main{max-width:1180px;margin:18px auto;padding:0 14px}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.metric,.panel,.skill,.card{border:1px solid rgba(58,145,146,.48);border-radius:10px;background:var(--panel);backdrop-filter:blur(7px)}
+.metric{padding:11px}.metric small{display:block;color:var(--muted)}.metric strong{font-size:20px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 18px}.tab.active{color:var(--lime);border-color:#79942b}
+.eyebrow{font-size:9px;color:var(--lime);letter-spacing:1.5px;font-weight:800}h2{font-size:18px}.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.skill{padding:12px}.bar{height:7px;background:#34273a;border-radius:99px;margin-top:10px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#8aff93,#e07bff)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.panel{padding:12px}.card{padding:10px 12px;margin:7px 0}.card b{display:block}.card span{font-size:11px;color:#c9e6e1}
+@media(max-width:900px){.metrics{grid-template-columns:repeat(3,1fr)}.skills,.grid{grid-template-columns:1fr}}
+</style></head><body>
+<header><div class="brand"><div class="logo">A</div><div><div class="sub">DRAGON CORE · BUILD 006</div><div class="title">AIDRAX Evolution Control</div></div></div><div><span class="pill" id="pill">LOCAL · ACTIVE</span> <button class="btn" onclick="refreshAll()">Aktualisieren</button></div></header>
+<main>
+<div class="metrics">
+<div class="metric"><small>Bestätigte Memories</small><strong id="m1">157</strong></div><div class="metric"><small>Lern-Queue</small><strong id="m2">0</strong></div><div class="metric"><small>Import-Vorschau</small><strong id="m3">0</strong></div><div class="metric"><small>Quarantäne</small><strong id="m4">0</strong></div><div class="metric"><small>Upgrades</small><strong id="m5">0</strong></div><div class="metric"><small>Quellen</small><strong id="m6">1 / 1</strong></div>
+</div>
+<div class="tabs"><button class="tab active">Evolution</button><button class="tab">Import-Vorschau</button><button class="tab">Quellen</button><button class="tab">Lern-Queue</button><button class="tab">Manuell lernen</button><button class="tab">Memory</button><button class="tab">Upgrades</button><button class="tab">Reflexion</button><button class="tab">Audit</button></div>
+<div class="eyebrow">EXPERIENCE CORE</div><h2>Kompetenzentwicklung</h2>
+<div class="skills"><div class="skill">ai · LEVEL 1<div class="bar"><div class="fill" style="width:12%"></div></div></div><div class="skill">animation · LEVEL 1<div class="bar"><div class="fill" style="width:20%"></div></div></div><div class="skill">communication · LEVEL 1<div class="bar"><div class="fill" style="width:12%"></div></div></div><div class="skill">general · LEVEL 1<div class="bar"><div class="fill" style="width:76%"></div></div></div></div>
+<div class="grid">
+<div class="panel"><div class="eyebrow">IMMUTABLE</div><h2>Core Values <span class="pill">LOCKED</span></h2>
+<div class="card"><b>honesty</b><span>AIDRAX communicates truthfully and marks uncertainty.</span></div><div class="card"><b>identity</b><span>AIDRAX core identity cannot be rewritten by learned content.</span></div><div class="card"><b>owner_gate</b><span>Persistent learning and capability upgrades require owner control.</span></div><div class="card"><b>respect</b><span>AIDRAX remains respectful and never humiliates the user.</span></div><div class="card"><b>safety</b><span>No hidden, destructive, or unauthorized actions.</span></div><div class="card"><b>source_integrity</b><span>Sources are previewed or quarantined before learning.</span></div></div>
+<div class="panel"><div class="eyebrow">RUNTIME</div><h2>Agentenstatus</h2><div id="runtime"></div></div>
+</div></main>
+<script>
+const row=(k,v)=>`<div class="card"><b>${k}</b><span>${v}</span></div>`;
+async function refreshAll(){try{const r=await fetch('/api/status',{cache:'no-store'});const s=await r.json();const m=s.metrics||{};m1.textContent=m.confirmed_memories??157;m2.textContent=m.learning_queue??0;m3.textContent=m.import_preview??0;m4.textContent=m.quarantine??0;m5.textContent=m.upgrades??0;m6.textContent=m.sources??'1 / 1';const x=s.runtime||{};runtime.innerHTML=row('schema_version',x.schema_version??6)+row('runtime_status',x.runtime_status??'running')+row('runtime_started_at',x.runtime_started_at??'-')+row('last_heartbeat',x.last_heartbeat??'-')+row('last_reflection_epoch',x.last_reflection_epoch??0)+row('build_version',x.build_version??'0.6.0');pill.textContent='LOCAL · ACTIVE'}catch(e){pill.textContent='LOCAL · DEGRADED'}}refreshAll();setInterval(refreshAll,15000);
+</script></body></html>
