@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+
+runtime_dir=/run/aidrax
+mkdir -p "$runtime_dir"
+printf '%s\n' "AIDRAX_XORG_LAUNCH argv=$*" >> "$runtime_dir/xorg-launch.log"
+exec /usr/lib/xorg/Xorg "$@"

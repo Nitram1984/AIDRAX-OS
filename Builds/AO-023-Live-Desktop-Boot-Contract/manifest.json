@@ -1,0 +1,1 @@
+{"schema_version":1,"release":"AO-023.0.0-alpha.1","status":"owner-approved-contract","required_paths":["README.md","VERSION","manifest.json","config/boot-contract.json","docs/INTEGRATION-GATE.md","src/aidrax_live_boot/__init__.py","src/aidrax_live_boot/contract.py","tests/test_contract.py","build/verify_release.sh"]}

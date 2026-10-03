@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "requested_packages": [
+    "sddm",
+    "xserver-xorg",
+    "xserver-xorg-video-vesa",
+    "openbox",
+    "xterm",
+    "python3-tk",
+    "network-manager",
+    "network-manager-gnome",
+    "wpasupplicant"
+  ],
+  "desktop_user": "aidrax",
+  "session": "aidrax",
+  "display_server": "x11",
+  "prohibited_actions": [
+    "host_package_install",
+    "host_service_start",
+    "host_mount",
+    "storage_write",
+    "firmware_change",
+    "automatic_install"
+  ]
+}

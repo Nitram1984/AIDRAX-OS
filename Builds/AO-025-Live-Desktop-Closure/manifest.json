@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "release": "AO-025.0.0-owner-review.1",
+  "status": "owner-approved-isolated-integration",
+  "required_paths": [
+    "README.md",
+    "VERSION",
+    "manifest.json",
+    "config/desktop-closure.json",
+    "config/sddm/99-aidrax-manual-login.conf",
+    "config/xorg/20-qemu-vesa.conf",
+    "desktop/aidrax-dashboard.py",
+    "desktop/aidrax-xorg-launch",
+    "desktop/pets/aidrax-draco-standard/pet.json",
+    "desktop/pets/aidrax-draco-standard/spritesheet.webp",
+    "desktop/pets/aidrax-draco-standard/draco-idle.gif",
+    "desktop/aidrax-session",
+    "desktop/aidrax.desktop",
+    "desktop/sddm.conf",
+    "docs/OWNER-REVIEW.md",
+    "docs/OWNER-STATUS-20260904.md",
+    "docs/R9-VM-GRAPHICS-FIX.md",
+    "docs/R10-GREETER-COMPATIBILITY-FIX.md",
+    "docs/R11-XORG-VESA-FORCE.md",
+    "docs/R12-SDDM-XORG-LAUNCH-TRACE.md",
+    "build/verify_release.sh",
+    "build/build_iso.sh"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "boot_entry": "live-desktop",
+  "rootfs": {
+    "kernel": "boot/vmlinuz-6.8.0-31-generic",
+    "initrd": "boot/initrd.img-6.8.0-31-generic",
+    "squashfs": "casper/filesystem.squashfs"
+  },
+  "efi_required": ["EFI/BOOT/BOOTX64.EFI", "EFI/BOOT/grubx64.efi"],
+  "efi_sha256": {
+    "EFI/BOOT/BOOTX64.EFI": "3ed8aa3591f793de2e0886d077aae950810843caac5eaf96e1436a439bf5e150",
+    "EFI/BOOT/grubx64.efi": "076ceb4824b4bc71e898aaf10cefb738f4eb15efc5e6e951c150c1a265a47d36"
+  },
+  "desktop": {
+    "display_manager": "sddm",
+    "theme": "aidrax",
+    "session": "aidrax.desktop",
+    "wallpaper": "assets/brand/wallpapers/aidrax-spectral-dragon-001.png"
+  },
+  "prohibited_actions": [
+    "network_download",
+    "host_mount",
+    "storage_write",
+    "bootloader_install",
+    "firmware_change",
+    "secure_boot_key_change",
+    "automatic_install"
+  ]
+}

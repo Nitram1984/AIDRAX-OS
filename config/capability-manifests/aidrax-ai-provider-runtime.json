@@ -1,0 +1,12 @@
+{
+  "id": "ai-provider-runtime",
+  "name": "AIDRAX AI Provider Runtime",
+  "version": "1.0.0",
+  "description": "Provider runtime bridge for local and owner-gated AI backends.",
+  "author": "AIDRAX Intelligence",
+  "dependencies": [],
+  "permissions": [],
+  "health": "HEALTHY",
+  "priority": 50,
+  "supported_interfaces": ["ai.provider.runtime"]
+}

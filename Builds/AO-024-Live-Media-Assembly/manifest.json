@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "release": "AO-024.0.0-alpha.1",
+  "status": "owner-approved-offline-assembly",
+  "required_paths": [
+    "README.md",
+    "VERSION",
+    "manifest.json",
+    "config/media-contract.json",
+    "desktop/sddm-theme/theme.conf",
+    "desktop/sddm-theme/Main.qml",
+    "desktop/sddm-theme/aidrax-spectral-dragon-001.png",
+    "desktop/aidrax-session.desktop",
+    "desktop/desktop-session",
+    "docs/INTEGRATION-GATE.md",
+    "input-evidence/EFI/BOOT/BOOTX64.EFI",
+    "input-evidence/EFI/BOOT/grubx64.efi",
+    "src/aidrax_live_media/__init__.py",
+    "src/aidrax_live_media/assembly.py",
+    "tests/test_assembly.py",
+    "build/verify_release.sh"
+  ]
+}
