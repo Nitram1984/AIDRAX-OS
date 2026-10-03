@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=AIDRAX LockScreen
+Comment=AIDRAX Star-Rail inspired lock screen for Plasma 5
+X-KDE-PluginInfo-Author=AIDRAX
+X-KDE-PluginInfo-Name=com.aidrax.lockscreen
+X-KDE-PluginInfo-Version=001
+X-KDE-PluginInfo-License=GPL-3.0
+X-KDE-ServiceTypes=Plasma/LookAndFeel
