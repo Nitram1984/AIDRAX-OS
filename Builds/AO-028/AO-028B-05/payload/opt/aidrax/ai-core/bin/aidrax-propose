@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+import json
+import sys
+import uuid
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path("/var/lib/aidrax/ai-core/evolution/proposals")
+
+if len(sys.argv) < 5:
+    print("usage: aidrax-propose <reason> <benefit> <risk> <validation-plan>")
+    raise SystemExit(2)
+
+pid = "EVO-" + uuid.uuid4().hex[:8].upper()
+
+data = {
+    "proposal_id": pid,
+    "created": datetime.now(timezone.utc).isoformat(),
+    "reason": sys.argv[1],
+    "expected_benefit": sys.argv[2],
+    "risk": sys.argv[3],
+    "validation_plan": sys.argv[4],
+    "status": "pending-owner",
+    "owner_approved": False
+}
+
+ROOT.mkdir(parents=True, exist_ok=True)
+path = ROOT / f"{pid}.json"
+path.write_text(json.dumps(data, indent=2) + "\n")
+
+print(json.dumps(data, indent=2))

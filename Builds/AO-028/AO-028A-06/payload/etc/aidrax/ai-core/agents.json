@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "build": "AO-028A-05",
+  "agents": [
+    {"id": "planner", "role": "planning", "enabled": true, "critical": false},
+    {"id": "executor", "role": "execution", "enabled": true, "critical": true},
+    {"id": "validator", "role": "validation", "enabled": true, "critical": false},
+    {"id": "security", "role": "security-review", "enabled": true, "critical": true},
+    {"id": "memory", "role": "memory-access", "enabled": true, "critical": false},
+    {"id": "provider-router", "role": "provider-selection", "enabled": true, "critical": false}
+  ]
+}

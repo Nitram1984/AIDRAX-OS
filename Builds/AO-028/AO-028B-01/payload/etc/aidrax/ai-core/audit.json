@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "build": "AO-028A-07",
+  "enabled": true,
+  "ledger": "/var/lib/aidrax/ai-core/audit/ledger.jsonl",
+  "rollback_root": "/var/lib/aidrax/ai-core/rollback",
+  "owner_gate": {
+    "required_for_rollback_apply": true,
+    "required_for_ledger_delete": true
+  }
+}

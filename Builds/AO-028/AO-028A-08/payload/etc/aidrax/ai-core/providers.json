@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "build": "AO-028A-02",
+  "providers": [
+    {
+      "id": "openai",
+      "type": "external",
+      "status": "active",
+      "priority": 10
+    },
+    {
+      "id": "ollama",
+      "type": "local",
+      "status": "standby",
+      "priority": 20,
+      "policy": "advisory-only"
+    },
+    {
+      "id": "xai",
+      "type": "external",
+      "status": "watchlist",
+      "priority": 90,
+      "owner_gate_required": true
+    }
+  ]
+}

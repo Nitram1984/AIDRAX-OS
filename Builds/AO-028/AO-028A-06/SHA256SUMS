@@ -1,0 +1,16 @@
+9acacb4e19ae7751e6d08cce490c00b5eb49374a09bdeb8140d9d0d41884a761  ./BUILD.txt
+f93b6464d29d847d78f54445966a2408a51a2b2bfb0dfb8e7522d10c5d8ad000  ./payload/etc/aidrax/ai-core/agents.json
+d89603353ee3e4a3f18e2ddfe4863a3491dd69687155c4fdd1539198715aa9b7  ./payload/etc/aidrax/ai-core/build.json
+feb16415f972cd2cd099273cd4d5ebc312bf90a57ba2ccba08261a84a99916e4  ./payload/etc/aidrax/ai-core/core.json
+c0d7ddf413925a89901228e53fea0c1f1abe7808b565674adb06d10ed874c9c5  ./payload/etc/aidrax/ai-core/health.json
+f8dc8fa3302559ac1f1d31603ce7e42b9ff570877f4412f78a17ff6e926f5d32  ./payload/etc/aidrax/ai-core/memoryvault.json
+c8b343b18dc12d3328689d137b85598be289cc98fc04cc81f1b7ba3a39537f9b  ./payload/etc/aidrax/ai-core/orchestrator.json
+f61fbfd7ca1b79e62b588e3f05e3565e3a25402f9f67f1a597863e6758730596  ./payload/etc/aidrax/ai-core/providers.json
+31d6792d1d2338f04454759b662a91d95bc16506cd8d3664fa5113257895be12  ./payload/etc/aidrax/ai-core/routing.json
+f487ad95ff256a00776a573f798bd45503a2aafd735b4c62f9ce9a243f6721aa  ./payload/opt/aidrax/ai-core/bin/aidrax-health
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./payload/var/lib/aidrax/ai-core/memory/builds.jsonl
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./payload/var/lib/aidrax/ai-core/memory/events.jsonl
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./payload/var/lib/aidrax/ai-core/memory/lessons.jsonl
+48ed2d6968f659c416d4a26efba705abd3c3d026557cb41316c53ce18db80f90  ./payload/var/lib/aidrax/ai-core/state/core-state.json
+fd0ee17c0c530c0a02b5eb76fdbe777454f06c7a6c3ed02d75a6c1b87452625e  ./systemd/aidrax-ai-health.service
+6f9bb1fa876886534c3addbd3f91e5641a7e6cb05e3d6eb0be6e5c32a5418a90  ./validate.sh

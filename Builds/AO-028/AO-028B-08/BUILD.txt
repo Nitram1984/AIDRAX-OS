@@ -1,0 +1,21 @@
+AIDRAX OS
+AO-028B-08
+
+AIDRAX EVOLUTION / SELF-LEARNING LAYER
+
+Includes:
+
+AO-028B-01 Evolution Core & Observation
+AO-028B-02 Feedback & Quality Scoring
+AO-028B-03 Skill Learning
+AO-028B-04 Proposal Engine
+AO-028B-05 Validation Sandbox
+AO-028B-06 Self-Healing
+AO-028B-07 Local Learning Pipeline
+AO-028B-08 Evolution Controller & Final Validation
+
+Governance:
+- autonomous production deployment disabled
+- automatic repair disabled
+- local training disabled
+- Owner Gate required

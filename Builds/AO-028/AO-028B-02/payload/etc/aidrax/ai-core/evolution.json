@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "build": "AO-028B-01",
+  "enabled": true,
+  "mode": "observe-only",
+  "autonomous_deploy": false,
+  "observation": {
+    "enabled": true,
+    "sources": [
+      "runtime-events",
+      "validation-results",
+      "provider-results",
+      "agent-results",
+      "memoryvault"
+    ]
+  },
+  "owner_gate": {
+    "required_for_activation": true,
+    "required_for_deployment": true
+  }
+}

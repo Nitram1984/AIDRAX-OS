@@ -1,0 +1,4 @@
+AO-028B-01
+Evolution Core & Observation
+Mode: observe-only
+Autonomous deployment: disabled

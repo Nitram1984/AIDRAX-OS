@@ -1,0 +1,12 @@
+{
+  "core": "online",
+  "provider_registry": "pending",
+  "adaptive_router": "pending",
+  "memoryvault_bridge": "pending",
+  "orchestrator": "pending",
+  "agents": "pending",
+  "health_api": "foundation",
+  "audit": "foundation",
+  "owner_gate": "enabled",
+  "evolution": "not-installed"
+}

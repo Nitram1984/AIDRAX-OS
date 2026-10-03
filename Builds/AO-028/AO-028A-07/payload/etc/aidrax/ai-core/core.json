@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "component": "aidrax-ai-core",
+  "build": "AO-028A-01",
+  "release_name": "CORE-LAYOUT-CONFIG",
+  "enabled": true,
+  "orchestrator": {"enabled": false},
+  "provider_registry": {"enabled": false},
+  "memoryvault": {"enabled": false},
+  "adaptive_routing": {"enabled": false},
+  "agents": {"enabled": false},
+  "health": {"enabled": true},
+  "audit": {"enabled": true},
+  "owner_gate": {
+    "enabled": true,
+    "default_policy": "deny-critical"
+  },
+  "evolution": {
+    "enabled": false,
+    "reserved_for": "AO-028B"
+  }
+}

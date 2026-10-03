@@ -1,0 +1,20 @@
+AIDRAX OS
+AO-028A-08
+
+AIDRAX AI CORE / CONTROL FOUNDATION
+Owner-Gate & Final Validation
+
+Includes cumulative builds:
+
+AO-028A-01 Core Layout & Config
+AO-028A-02 Provider Registry
+AO-028A-03 Adaptive Router
+AO-028A-04 MemoryVault Bridge
+AO-028A-05 Orchestrator & Agent Framework
+AO-028A-06 Health & Status API
+AO-028A-07 Audit Ledger & Rollback
+AO-028A-08 Owner-Gate & Final Validation
+
+AIDRAX EVOLUTION:
+NOT INCLUDED
+Reserved for AO-028B.

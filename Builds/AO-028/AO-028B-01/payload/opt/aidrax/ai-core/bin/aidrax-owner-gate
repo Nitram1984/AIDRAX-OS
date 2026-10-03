@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+
+import json
+import sys
+from pathlib import Path
+
+CONFIG = Path("/etc/aidrax/ai-core/owner-gate.json")
+
+
+def load():
+    with CONFIG.open("r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def status():
+    cfg = load()
+
+    print("AIDRAX OWNER GATE")
+    print("=" * 48)
+    print(f"Enabled        : {cfg['enabled']}")
+    print(f"Default policy : {cfg['default_policy']}")
+    print()
+
+    print("Protected:")
+    for item in cfg["protected_components"]:
+        print(f" - {item}")
+
+
+def check(action):
+    cfg = load()
+
+    critical = action in cfg["critical_actions"]
+
+    if critical:
+        print("OWNER-GATE-REQUIRED")
+        return 10
+
+    print("ALLOWED")
+    return 0
+
+
+if len(sys.argv) < 2:
+    status()
+
+elif sys.argv[1] == "status":
+    status()
+
+elif sys.argv[1] == "check":
+    if len(sys.argv) < 3:
+        print("usage: aidrax-owner-gate check <action>")
+        raise SystemExit(2)
+
+    raise SystemExit(check(sys.argv[2]))
+
+else:
+    print("usage: aidrax-owner-gate [status|check <action>]")
+    raise SystemExit(2)

@@ -1,0 +1,11 @@
+6dac19d5b395a405f7e7e4dbf44d21ecd518032991fcb98f6b0231129ec2ae5a  ./BUILD.txt
+d89603353ee3e4a3f18e2ddfe4863a3491dd69687155c4fdd1539198715aa9b7  ./payload/etc/aidrax/ai-core/build.json
+feb16415f972cd2cd099273cd4d5ebc312bf90a57ba2ccba08261a84a99916e4  ./payload/etc/aidrax/ai-core/core.json
+f8dc8fa3302559ac1f1d31603ce7e42b9ff570877f4412f78a17ff6e926f5d32  ./payload/etc/aidrax/ai-core/memoryvault.json
+f61fbfd7ca1b79e62b588e3f05e3565e3a25402f9f67f1a597863e6758730596  ./payload/etc/aidrax/ai-core/providers.json
+31d6792d1d2338f04454759b662a91d95bc16506cd8d3664fa5113257895be12  ./payload/etc/aidrax/ai-core/routing.json
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./payload/var/lib/aidrax/ai-core/memory/builds.jsonl
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./payload/var/lib/aidrax/ai-core/memory/events.jsonl
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./payload/var/lib/aidrax/ai-core/memory/lessons.jsonl
+886564e88e13b64319af517a3043afbb3370da3699d22c2466c1eccac1a70c83  ./payload/var/lib/aidrax/ai-core/state/core-state.json
+6f9bb1fa876886534c3addbd3f91e5641a7e6cb05e3d6eb0be6e5c32a5418a90  ./validate.sh

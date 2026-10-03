@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "build": "AO-028B-08",
+  "enabled": true,
+  "cycle": [
+    "observe",
+    "score",
+    "learn",
+    "propose",
+    "sandbox",
+    "heal-proposal",
+    "dataset-preparation",
+    "owner-gate"
+  ],
+  "autonomous_production_deploy": false,
+  "owner_gate_required": true,
+  "protected_components": [
+    "kernel",
+    "bootloader",
+    "firewall",
+    "credentials",
+    "security-policies"
+  ]
+}

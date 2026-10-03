@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+import json
+import re
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path("/var/lib/aidrax/ai-core/evolution/skills")
+
+if len(sys.argv) < 3:
+    print("usage: aidrax-skill-propose <name> <description>")
+    raise SystemExit(2)
+
+name = sys.argv[1]
+desc = " ".join(sys.argv[2:])
+safe = re.sub(r"[^a-zA-Z0-9._-]", "-", name)
+
+ROOT.mkdir(parents=True, exist_ok=True)
+path = ROOT / f"{safe}.json"
+
+data = {
+    "name": name,
+    "description": desc,
+    "status": "proposal",
+    "created": datetime.now(timezone.utc).isoformat(),
+    "owner_approved": False
+}
+
+path.write_text(json.dumps(data, indent=2) + "\n")
+print(path)
