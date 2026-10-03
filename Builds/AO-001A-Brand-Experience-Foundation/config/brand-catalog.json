@@ -1,5 +1,12 @@
 {
   "schema_version": 1,
   "catalog_version": "0.0.0",
-  "assets": []
+  "assets": [
+    {
+      "asset_id": "aidrax.spectral-dragon.wallpaper.001",
+      "kind": "wallpaper",
+      "path": "assets/brand/wallpapers/aidrax-spectral-dragon-001.png",
+      "sha256": "b71d9a51b8b6438d7bdddd2ba42df28f6adae5c3f083aea316e788d56239960c"
+    }
+  ]
 }
